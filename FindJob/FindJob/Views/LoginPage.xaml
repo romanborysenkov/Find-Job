@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:FindJob.ViewModels"
+    x:DataType="viewmodels:LoginViewModel"
+    x:Class="FindJob.Views.LoginPage"
+    BackgroundColor="Black">
+
+
+    <StackLayout HorizontalOptions="Center">
+
+
+        <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="0,20,0,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding Email}" Placeholder="Email"/>
+                 </Frame>
+            
+
+             <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="0,20,0,0">
+            <Entry  HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding Password}" IsPassword="True" Placeholder="Password"/>
+                 </Frame>
+
+          <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="0,20,0,0">
+            <Button WidthRequest="350" CornerRadius="30" Text="Log in" Command="{Binding OnLogin}" Margin="15,-30,0,-30" TextColor="White"/>
+                 </Frame>
+
+       <Label
+                        FontAttributes="None"
+                        FontSize="18"
+                        HorizontalOptions="CenterAndExpand"
+                        TextColor="#99A1B3"
+                        VerticalOptions="CenterAndExpand" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Don't have an account? " ></Span>
+                                <Span x:Name="signUp" TextColor="#791AE5" Text="Sign Up"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                         <Label.GestureRecognizers>
+                             <TapGestureRecognizer Command="{Binding OnSignUp}"/>
+                         </Label.GestureRecognizers>
+                    </Label>
+    </StackLayout>
+</ContentPage>
+

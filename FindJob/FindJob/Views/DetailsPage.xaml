@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FindJob.Views.DetailsPage"
+   xmlns:local="clr-namespace:FindJob.ViewModels"
+      x:DataType="local:VacancyDetailsViewModel"
+    xmlns:model="clr-namespace:FindJob.Models"
+    Title="Details"
+    BackgroundColor="Black">
+
+
+    <ScrollView>
+    <StackLayout>
+
+        <Label Margin="30" TextColor="White" FontSize="36" FontAttributes="Bold" Text="{Binding vacancy.vacancyname}"/>
+
+         
+       <StackLayout Margin="50,-35,0,0" Orientation="Horizontal">
+               <Label FontSize="24" FontAttributes="Italic" TextColor="White" Text="{Binding vacancy.location}"/>
+               <Label FontSize="24" FontAttributes="Italic" TextColor="White" Text="{Binding vacancy.category}"/>
+             <Label FontSize="24" FontAttributes="Italic" TextColor="White" Text="{Binding TimePub}"/>
+        </StackLayout>
+
+         <Button Margin="25,20,25,0" x:Name="reqbut" WidthRequest="200" Text="Відгукнутися" BackgroundColor="White" TextColor="Black" Command="{Binding OnSendAnswer}"/>
+        <Label x:Name="reqlab" FontSize="22" Margin="25,20,25,0" Text="Ви вже відповіли на цю вакансію" TextColor="White"/>
+
+       <StackLayout Orientation="Vertical">
+        <Label Margin="25,0,10,0" FontSize="28" FontAttributes="Bold" TextColor="White" Text="Requires"/>
+         <Label Margin="35,0,10,0" FontSize="24" TextColor="White" Text="{Binding vacancy.requires}"/>
+
+            <Label Margin="25,0,10,0" FontSize="28" FontAttributes="Bold" TextColor="White" Text="Offer"/>
+         <Label Margin="35,0,10,0" FontSize="24" TextColor="White" Text="{Binding vacancy.offer}"/>
+
+            <Label Margin="25,0,10,0" FontSize="28" FontAttributes="Bold" TextColor="White" Text="Description"/>
+         <Label Margin="35,0,10,0" FontSize="24" TextColor="White" Text="{Binding vacancy.description}"/>
+
+        <StackLayout Margin="100,0,0,0" Orientation="Horizontal">
+               <Label FontSize="24" FontAttributes="Italic" TextColor="White" Text="{Binding vacancy.salary}"/>
+             <Label FontSize="24" FontAttributes="Italic" TextColor="White" Text="грн"/>
+              <Label FontSize="24" FontAttributes="Italic" TextColor="White" Text="{Binding vacancy.company}"/>
+        </StackLayout>
+           </StackLayout>
+
+    </StackLayout>
+        </ScrollView>
+</ContentPage>
+

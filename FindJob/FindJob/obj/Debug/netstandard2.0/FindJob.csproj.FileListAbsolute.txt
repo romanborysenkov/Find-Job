@@ -1,0 +1,42 @@
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/FindJob.csproj.AssemblyReference.cache
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/AppShell.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/Views/VacanciesPage.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/FindJob.AssemblyInfoInputs.cache
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/FindJob.AssemblyInfo.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/FindJob.csproj.CoreCompileInputs.cache
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/FindJob.dll
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/ref/FindJob.dll
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/FindJob.pdb
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/bin/Debug/netstandard2.0/FindJob.deps.json
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/bin/Debug/netstandard2.0/FindJob.dll
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/bin/Debug/netstandard2.0/ref/FindJob.dll
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/bin/Debug/netstandard2.0/FindJob.pdb
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/Views/DetailsPage.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/Views/LoginPage.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/Views/SignupPage.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/Views/ResumePage.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/bin/Debug/netstandard2.0/FindJob.deps.json
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/bin/Debug/netstandard2.0/FindJob.dll
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/bin/Debug/netstandard2.0/ref/FindJob.dll
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/bin/Debug/netstandard2.0/FindJob.pdb
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/AppShell.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/Views/DetailsPage.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/Views/LoginPage.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/Views/ResumePage.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/Views/SignupPage.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/Views/VacanciesPage.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/FindJob.AssemblyInfoInputs.cache
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/FindJob.AssemblyInfo.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/FindJob.csproj.CoreCompileInputs.cache
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/FindJob.dll
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/ref/FindJob.dll
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/FindJob.pdb
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob copy/FindJob/FindJob/obj/Debug/netstandard2.0/FindJob.csproj.AssemblyReference.cache
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/Views/Employer/AllResumesPage.xaml.g.cs
+/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/obj/Debug/netstandard2.0/Views/ResponsesPage.xaml.g.cs

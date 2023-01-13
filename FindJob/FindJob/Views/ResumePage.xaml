@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:FindJob.ViewModels"
+    x:DataType="viewmodels:ResumeViewModel"
+    x:Class="FindJob.Views.ResumePage"
+    BackgroundColor="Black"
+    >
+
+     <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="Button_Clicked"/>
+       
+    </ContentPage.ToolbarItems>
+
+
+
+    <RefreshView x:DataType="viewmodels:ResumeViewModel" Command="{Binding LoadResumeCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+    <ScrollView>
+    <StackLayout HorizontalOptions="Center" HeightRequest="2000">
+
+     
+        <ImageButton Clicked="Button_Clicked_1" BackgroundColor="Transparent" x:Name="image" HeightRequest="300" Source="{Binding resume.photoSrc}"/>
+
+                          <Label Margin="25" FontSize="Large" Text="Особиста інформація"/>
+
+        <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding user.firstname}" Placeholder="First name"/>
+                 </Frame>
+            
+
+          <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding user.secondname}" Placeholder="Second name"/>
+                 </Frame>
+            
+               
+         <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding resume.age}" Placeholder="Age"/>
+                 </Frame>
+
+           <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding resume.Location}" Placeholder="Location"/>
+                 </Frame>
+
+         <Label Margin="25" FontSize="Large"  Text="Контактна інформація"/>
+
+
+           <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding user.phone}" Placeholder="Phone"/>
+                 </Frame>
+
+
+           <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding user.email}" Placeholder="Email"/>
+                 </Frame>
+
+         <Label Margin="25" FontSize="Large" Text="Бажана посада"/>
+
+
+           <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding resume.desireWork}" Placeholder="Desire work"/>
+                 </Frame>
+
+
+         <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding resume.desireSalary}" Placeholder="Desire salary"/>
+                 </Frame>
+
+           <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding resume.employmentDegree}" Placeholder="Employment degree"/>
+                 </Frame>
+     
+      
+
+           <Label Margin="25" FontSize="Large" Text="Освіта"/>
+
+
+           <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding resume.education}" Placeholder="Education"/>
+                 </Frame>
+
+           <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding resume.educationDegree}" Placeholder="Education degree"/>
+                 </Frame>
+
+
+           <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding resume.graduationYear}" Placeholder="Graduation year"/>
+                 </Frame>
+
+         <Label FontSize="Large" Margin="25" Text="Ключові навички "/>
+
+
+           <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding resume.skills}" Placeholder="Skills"/>
+                 </Frame>
+
+           <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding resume.expirience}" Placeholder="Expirience"/>
+                 </Frame>
+
+
+
+         <Label FontSize="Large" Margin="25" Text="Мови"/>
+
+           <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="35,5,35,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding resume.languages}" Placeholder="Languages"/>
+                 </Frame>
+
+            <Button CornerRadius="30" WidthRequest="250" HeightRequest="50" Margin="35,20,35,0" TextColor="White" Clicked="Button_Clicked" Text="Save"/>
+
+    <!--  <ActivityIndicator IsRunning="{Binding IsBusy}" />-->
+
+    </StackLayout>
+        </ScrollView>
+        </RefreshView>
+</ContentPage>
+

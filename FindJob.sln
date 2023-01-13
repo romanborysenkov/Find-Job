@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindJob.Android", "FindJob\FindJob.Android\FindJob.Android.csproj", "{20AF7ACE-F089-4FC2-9643-9B39EA9DB248}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindJob", "FindJob\FindJob\FindJob.csproj", "{618C6CF9-B661-454C-B2B4-C5803E5AC76C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20AF7ACE-F089-4FC2-9643-9B39EA9DB248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20AF7ACE-F089-4FC2-9643-9B39EA9DB248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20AF7ACE-F089-4FC2-9643-9B39EA9DB248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20AF7ACE-F089-4FC2-9643-9B39EA9DB248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{618C6CF9-B661-454C-B2B4-C5803E5AC76C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{618C6CF9-B661-454C-B2B4-C5803E5AC76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{618C6CF9-B661-454C-B2B4-C5803E5AC76C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{618C6CF9-B661-454C-B2B4-C5803E5AC76C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F10B6DE-10DA-462D-8BE7-7B0F84E3DDB5}
+	EndGlobalSection
+EndGlobal

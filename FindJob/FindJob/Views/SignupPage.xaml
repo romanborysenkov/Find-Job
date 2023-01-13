@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:FindJob.ViewModels"
+    x:DataType="viewmodels:SignupViewModel"
+    x:Class="FindJob.Views.SignupPage"
+    BackgroundColor="Black"
+    >
+
+
+    
+        <StackLayout HorizontalOptions="Center">
+
+            <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="0,20,0,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding u.firstname}" Placeholder="First Name"/>
+                 </Frame>
+
+             <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="0,20,0,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding u.secondname}" Placeholder="Second Name"/>
+                 </Frame>
+
+             <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="0,20,0,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding u.email}" Placeholder="Email"/>
+                 </Frame>
+            
+
+             <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="0,20,0,0">
+            <Entry  HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding u.salt}" IsPassword="True" Placeholder="Password"/>
+                 </Frame>
+
+             <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="0,20,0,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding u.saltedhashedpassword}" IsPassword="True" Placeholder="Confirm password"/>
+                 </Frame>
+
+             <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="0,20,0,0">
+            <Entry HorizontalTextAlignment="Start" Margin="15,-30,0,-30" TextColor="White" Text="{Binding u.phone}" Placeholder="Phone"/>
+                 </Frame>
+
+            <Label Text="I`m employer"/>
+            <Switch IsToggled="{Binding u.isEmployer}"/>
+
+             <Frame CornerRadius="30" BackgroundColor="Gray" HasShadow="False" WidthRequest="350"
+                   HeightRequest="20" Margin="0,20,0,0">
+            <Button Text="Sign up" Command="{Binding OnSignUp}" Margin="15,-30,0,-30" TextColor="White"/>
+                 </Frame>
+
+
+             <Label
+                        FontAttributes="None"
+                        FontSize="18"
+                        HorizontalOptions="CenterAndExpand"
+                        TextColor="#99A1B3"
+                        VerticalOptions="CenterAndExpand" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Already have an account? " ></Span>
+                                <Span x:Name="signUp" TextColor="#791AE5" Text="Log in"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                         <Label.GestureRecognizers>
+                             <TapGestureRecognizer Command="{Binding OnLogin}"/>
+                         </Label.GestureRecognizers>
+                    </Label>
+        </StackLayout>
+</ContentPage>
+

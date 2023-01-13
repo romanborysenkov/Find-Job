@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FindJob.Views.VacanciesPage"
+     xmlns:viewmodels="clr-namespace:FindJob.ViewModels"
+    x:DataType="viewmodels:VacanciesViewModel"
+    xmlns:local="clr-namespace:FindJob.ViewModels"
+    xmlns:model="clr-namespace:FindJob.Models"
+    xmlns:renderers="clr-namespace:FindJob.Renderers"
+    Padding="0,40,0,0"
+    BackgroundColor="Black"
+    Title="Main page"
+   >
+
+
+    <ContentPage.BindingContext>
+        <local:VacanciesViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+       <!-- <ToolbarItem Text="Login" Command="{Binding GoToLogin}"/>-->
+        <ToolbarItem Text="{Binding UserName}"/>
+    </ContentPage.ToolbarItems>
+
+
+     <RefreshView x:Name="Refresh" x:DataType="local:VacanciesViewModel" Command="{Binding LoadVacanciesCommand}"  IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+
+    <Grid VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+       
+        <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="Start" VerticalOptions="Start" Margin="20,-10">
+          
+           
+        </StackLayout>
+
+ 
+        <Frame BackgroundColor="White" Grid.Row="1" HasShadow="True" CornerRadius="10" Margin="20,0,20,0" Padding="0" HeightRequest="100" VerticalOptions="Start">
+           
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                      <SearchBar FontSize="24" Margin="-10,0,-5,0" WidthRequest="390" BackgroundColor="White" TextColor="Black" Text="{Binding SearchString}"/>
+                </StackLayout>
+        </Frame>
+
+
+                <ActivityIndicator Color="White" Grid.Row="1" x:Name="downloadIndicator" Margin="20,120,20,0"/>
+
+        <CollectionView VerticalOptions="Center" HorizontalOptions="CenterAndExpand" ItemsLayout="VerticalGrid,2" Opacity="30" ItemsSource="{Binding Vacancies}"
+                  Grid.Row="1" Margin="20,120,20,0" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                   
+                      
+                            <Grid HeightRequest="155" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="150"/>
+                                   
+
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="190"/>
+                                  
+                                </Grid.ColumnDefinitions>
+
+
+                                <Frame HeightRequest="75" Padding="10"
+                                       BackgroundColor="White" BorderColor="Black" CornerRadius="15"
+                                       x:DataType="model:Vacancy">
+
+                                    <StackLayout>
+
+                                     <Label Text="{Binding vacancyname}" TextColor="Black" FontSize="18" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Margin="20,0"/>
+                                  
+
+                                          <StackLayout Orientation="Horizontal" Margin="20,0" HorizontalOptions="End" VerticalOptions="End">
+                                       <Label TextColor="#757575"  Text="{Binding location}" FontSize="14" />
+                                    <Label Text="{Binding salary}" TextColor="#757575" FontSize="14" FontAttributes="Bold" />
+                                   <Label Text="грн" TextColor="#757575" FontSize="14"/>
+                                </StackLayout>
+                                    </StackLayout>
+
+                                    <Frame.GestureRecognizers>
+                                          <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                      Command="{Binding Source={RelativeSource AncestorType={x:Type local:VacanciesViewModel}}, Path=VacancyTapped}"
+                                                      CommandParameter="{Binding .}">
+                                </TapGestureRecognizer>
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                            </Grid>
+                        
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+           
+    </Grid>
+           </RefreshView>
+</ContentPage>
+

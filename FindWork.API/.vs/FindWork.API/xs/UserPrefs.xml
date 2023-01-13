@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{2E48458D-E923-4464-9D10-79291E0B078D}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindWork.API/Controllers/ResponsesController.cs" relfile="Controllers/ResponsesController.cs" line="47" column="1" />
+      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindWork.API/Controllers/ResumeController.cs" relfile="Controllers/ResumeController.cs" line="37" column="1" />
+      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindWork.API/Controllers/ResumeController.cs" relfile="Controllers/ResumeController.cs" line="45" column="1" />
+      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindWork.API/Controllers/ResumeController.cs" relfile="Controllers/ResumeController.cs" line="38" column="1" />
+      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindWork.API/Controllers/ResumeController.cs" relfile="Controllers/ResumeController.cs" line="36" column="1" />
+      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindWork.API/Controllers/ResumeController.cs" relfile="Controllers/ResumeController.cs" line="41" column="1" />
+      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindWork.API/Controllers/ResumeController.cs" relfile="Controllers/ResumeController.cs" line="55" column="1" />
+      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindWork.API/Controllers/ResumeController.cs" relfile="Controllers/ResumeController.cs" line="60" column="1" />
+      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindWork.API/Controllers/ResumeController.cs" relfile="Controllers/ResumeController.cs" line="58" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/VacancyController.cs">
+    <Files>
+      <File FileName="Controllers/ResumeController.cs" />
+      <File FileName="Controllers/VacancyController.cs" Line="88" Column="45" />
+      <File FileName="Controllers/UserController.cs" />
+      <File FileName="Controllers/ResponsesController.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FindWork.API" expanded="True">
+            <Node name="FindWork.API" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Images" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.FindWork.API PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+</Properties>

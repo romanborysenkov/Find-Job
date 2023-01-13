@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FindJob.AppShell"
+    xmlns:local="clr-namespace:FindJob.Views">
+
+<Shell.Style>
+   <Style TargetType="Element">
+       <Setter Property="Shell.BackgroundColor" Value="#000" />
+    <Setter Property="Shell.ForegroundColor" Value="White" />
+    <Setter Property="Shell.TitleColor" Value="White" />
+    <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+    <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+    <Setter Property="Shell.TabBarBackgroundColor" Value="Transparent" />
+    <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+    <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+    <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+
+   </Style>
+
+</Shell.Style>
+
+
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="Black" HeightRequest="200">
+            <Label x:Name="header"
+                       TextColor="White"
+                       FontSize="28"
+                       Margin="20"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Start" />
+
+        </Grid>
+  
+
+    </Shell.FlyoutHeader>
+
+
+    <FlyoutItem Title="Main page">
+        
+        <ShellContent Route="VacanciesPage" ContentTemplate="{DataTemplate local:VacanciesPage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem x:Name="resume" Title="My resume">
+        <ShellContent Route="ResumePage" ContentTemplate="{DataTemplate local:ResumePage}"/>
+    </FlyoutItem>
+
+     <FlyoutItem x:Name="responses" Title="My responses">
+        <ShellContent Route="ResponsesPage" ContentTemplate="{DataTemplate local:ResponsesPage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem x:Name="login" Title="Login">
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}"/>
+    </FlyoutItem>
+
+    <MenuItem x:Name="logout" Text="Logout" Clicked="logout_Clicked">
+    </MenuItem>
+
+</Shell>
+
