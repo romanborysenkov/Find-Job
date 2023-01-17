@@ -27,6 +27,39 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "MonkeyCache/1.6.3": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/MonkeyCache.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MonkeyCache.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "MonkeyCache.FileStore/1.6.3": {
+        "type": "package",
+        "dependencies": {
+          "MonkeyCache": "1.6.3",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/MonkeyCache.FileStore.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MonkeyCache.FileStore.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -296,6 +329,96 @@
         "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json"
+      ]
+    },
+    "MonkeyCache/1.6.3": {
+      "sha512": "M7BE5LBnIdkaovXdfKq2HoJPOoD5dgt3ilwWB6f63/M7Kw/R+P+H+pw//50/Ei6beX6DuRwmuQngxyV6ZsjqCQ==",
+      "type": "package",
+      "path": "monkeycache/1.6.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/MonkeyCache.dll",
+        "lib/monoandroid10.0/MonkeyCache.pdb",
+        "lib/monoandroid10.0/MonkeyCache.xml",
+        "lib/net461/MonkeyCache.dll",
+        "lib/net461/MonkeyCache.pdb",
+        "lib/net461/MonkeyCache.xml",
+        "lib/net6.0-android31.0/MonkeyCache.dll",
+        "lib/net6.0-android31.0/MonkeyCache.pdb",
+        "lib/net6.0-android31.0/MonkeyCache.xml",
+        "lib/net6.0-ios15.2/MonkeyCache.dll",
+        "lib/net6.0-ios15.2/MonkeyCache.pdb",
+        "lib/net6.0-ios15.2/MonkeyCache.xml",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.dll",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.pdb",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.xml",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.dll",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.pdb",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.xml",
+        "lib/netstandard2.0/MonkeyCache.dll",
+        "lib/netstandard2.0/MonkeyCache.pdb",
+        "lib/netstandard2.0/MonkeyCache.xml",
+        "lib/uap10.0.16299/MonkeyCache.dll",
+        "lib/uap10.0.16299/MonkeyCache.pdb",
+        "lib/uap10.0.16299/MonkeyCache.pri",
+        "lib/uap10.0.16299/MonkeyCache.xml",
+        "lib/xamarinios10/MonkeyCache.dll",
+        "lib/xamarinios10/MonkeyCache.pdb",
+        "lib/xamarinios10/MonkeyCache.xml",
+        "lib/xamarinmac20/MonkeyCache.dll",
+        "lib/xamarinmac20/MonkeyCache.pdb",
+        "lib/xamarinmac20/MonkeyCache.xml",
+        "lib/xamarintvos10/MonkeyCache.dll",
+        "lib/xamarintvos10/MonkeyCache.pdb",
+        "lib/xamarintvos10/MonkeyCache.xml",
+        "monkeycache.1.6.3.nupkg.sha512",
+        "monkeycache.nuspec"
+      ]
+    },
+    "MonkeyCache.FileStore/1.6.3": {
+      "sha512": "uc9rdTkIMvtf8aZzJHAcwPaVG09NQQkwKLdfh3fRKpqhm2GVx1hiWvgRYmc42Mjx7ECELn+1vg7Cn6KAWezZNw==",
+      "type": "package",
+      "path": "monkeycache.filestore/1.6.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/MonkeyCache.FileStore.dll",
+        "lib/monoandroid10.0/MonkeyCache.FileStore.pdb",
+        "lib/monoandroid10.0/MonkeyCache.FileStore.xml",
+        "lib/net461/MonkeyCache.FileStore.dll",
+        "lib/net461/MonkeyCache.FileStore.pdb",
+        "lib/net461/MonkeyCache.FileStore.xml",
+        "lib/net6.0-android31.0/MonkeyCache.FileStore.dll",
+        "lib/net6.0-android31.0/MonkeyCache.FileStore.pdb",
+        "lib/net6.0-android31.0/MonkeyCache.FileStore.xml",
+        "lib/net6.0-ios15.2/MonkeyCache.FileStore.dll",
+        "lib/net6.0-ios15.2/MonkeyCache.FileStore.pdb",
+        "lib/net6.0-ios15.2/MonkeyCache.FileStore.xml",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.FileStore.dll",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.FileStore.pdb",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.FileStore.xml",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.FileStore.dll",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.FileStore.pdb",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.FileStore.xml",
+        "lib/netstandard2.0/MonkeyCache.FileStore.dll",
+        "lib/netstandard2.0/MonkeyCache.FileStore.pdb",
+        "lib/netstandard2.0/MonkeyCache.FileStore.xml",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.dll",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.pdb",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.pri",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.xml",
+        "lib/xamarinios10/MonkeyCache.FileStore.dll",
+        "lib/xamarinios10/MonkeyCache.FileStore.pdb",
+        "lib/xamarinios10/MonkeyCache.FileStore.xml",
+        "lib/xamarinmac20/MonkeyCache.FileStore.dll",
+        "lib/xamarinmac20/MonkeyCache.FileStore.pdb",
+        "lib/xamarinmac20/MonkeyCache.FileStore.xml",
+        "lib/xamarintvos10/MonkeyCache.FileStore.dll",
+        "lib/xamarintvos10/MonkeyCache.FileStore.pdb",
+        "lib/xamarintvos10/MonkeyCache.FileStore.xml",
+        "monkeycache.filestore.1.6.3.nupkg.sha512",
+        "monkeycache.filestore.nuspec"
       ]
     },
     "NETStandard.Library/2.0.3": {
@@ -1094,6 +1217,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "MonkeyCache.FileStore >= 1.6.3",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 13.0.2",
       "System.Text.Json >= 5.0.2",
@@ -1139,6 +1263,10 @@
       "netstandard2.0": {
         "targetAlias": "netstandard2.0",
         "dependencies": {
+          "MonkeyCache.FileStore": {
+            "target": "Package",
+            "version": "[1.6.3, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
@@ -1176,7 +1304,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/Users/romsyaborysenko/Library/Caches/VisualStudio/17.0/MSBuild/59530_3/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/romsyaborysenko/Library/Caches/VisualStudio/17.0/MSBuild/80851_3/RuntimeIdentifierGraph.json"
       }
     }
   }

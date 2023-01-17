@@ -15,6 +15,45 @@
           }
         }
       },
+      "MonkeyCache/1.6.3": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/MonkeyCache.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid10.0/MonkeyCache.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "MonkeyCache.FileStore/1.6.3": {
+        "type": "package",
+        "dependencies": {
+          "MonkeyCache": "1.6.3",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/MonkeyCache.FileStore.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid10.0/MonkeyCache.FileStore.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.2": {
         "type": "package",
         "compile": {
@@ -1886,6 +1925,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "MonkeyCache.FileStore": "1.6.3",
           "Newtonsoft.Json": "13.0.2",
           "System.Text.Json": "5.0.2",
           "Xamarin.CommunityToolkit": "1.1.0",
@@ -1922,6 +1962,96 @@
         "microsoft.bcl.asyncinterfaces.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "MonkeyCache/1.6.3": {
+      "sha512": "M7BE5LBnIdkaovXdfKq2HoJPOoD5dgt3ilwWB6f63/M7Kw/R+P+H+pw//50/Ei6beX6DuRwmuQngxyV6ZsjqCQ==",
+      "type": "package",
+      "path": "monkeycache/1.6.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/MonkeyCache.dll",
+        "lib/monoandroid10.0/MonkeyCache.pdb",
+        "lib/monoandroid10.0/MonkeyCache.xml",
+        "lib/net461/MonkeyCache.dll",
+        "lib/net461/MonkeyCache.pdb",
+        "lib/net461/MonkeyCache.xml",
+        "lib/net6.0-android31.0/MonkeyCache.dll",
+        "lib/net6.0-android31.0/MonkeyCache.pdb",
+        "lib/net6.0-android31.0/MonkeyCache.xml",
+        "lib/net6.0-ios15.2/MonkeyCache.dll",
+        "lib/net6.0-ios15.2/MonkeyCache.pdb",
+        "lib/net6.0-ios15.2/MonkeyCache.xml",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.dll",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.pdb",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.xml",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.dll",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.pdb",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.xml",
+        "lib/netstandard2.0/MonkeyCache.dll",
+        "lib/netstandard2.0/MonkeyCache.pdb",
+        "lib/netstandard2.0/MonkeyCache.xml",
+        "lib/uap10.0.16299/MonkeyCache.dll",
+        "lib/uap10.0.16299/MonkeyCache.pdb",
+        "lib/uap10.0.16299/MonkeyCache.pri",
+        "lib/uap10.0.16299/MonkeyCache.xml",
+        "lib/xamarinios10/MonkeyCache.dll",
+        "lib/xamarinios10/MonkeyCache.pdb",
+        "lib/xamarinios10/MonkeyCache.xml",
+        "lib/xamarinmac20/MonkeyCache.dll",
+        "lib/xamarinmac20/MonkeyCache.pdb",
+        "lib/xamarinmac20/MonkeyCache.xml",
+        "lib/xamarintvos10/MonkeyCache.dll",
+        "lib/xamarintvos10/MonkeyCache.pdb",
+        "lib/xamarintvos10/MonkeyCache.xml",
+        "monkeycache.1.6.3.nupkg.sha512",
+        "monkeycache.nuspec"
+      ]
+    },
+    "MonkeyCache.FileStore/1.6.3": {
+      "sha512": "uc9rdTkIMvtf8aZzJHAcwPaVG09NQQkwKLdfh3fRKpqhm2GVx1hiWvgRYmc42Mjx7ECELn+1vg7Cn6KAWezZNw==",
+      "type": "package",
+      "path": "monkeycache.filestore/1.6.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/MonkeyCache.FileStore.dll",
+        "lib/monoandroid10.0/MonkeyCache.FileStore.pdb",
+        "lib/monoandroid10.0/MonkeyCache.FileStore.xml",
+        "lib/net461/MonkeyCache.FileStore.dll",
+        "lib/net461/MonkeyCache.FileStore.pdb",
+        "lib/net461/MonkeyCache.FileStore.xml",
+        "lib/net6.0-android31.0/MonkeyCache.FileStore.dll",
+        "lib/net6.0-android31.0/MonkeyCache.FileStore.pdb",
+        "lib/net6.0-android31.0/MonkeyCache.FileStore.xml",
+        "lib/net6.0-ios15.2/MonkeyCache.FileStore.dll",
+        "lib/net6.0-ios15.2/MonkeyCache.FileStore.pdb",
+        "lib/net6.0-ios15.2/MonkeyCache.FileStore.xml",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.FileStore.dll",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.FileStore.pdb",
+        "lib/net6.0-maccatalyst15.2/MonkeyCache.FileStore.xml",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.FileStore.dll",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.FileStore.pdb",
+        "lib/net6.0-windows10.0.19041/MonkeyCache.FileStore.xml",
+        "lib/netstandard2.0/MonkeyCache.FileStore.dll",
+        "lib/netstandard2.0/MonkeyCache.FileStore.pdb",
+        "lib/netstandard2.0/MonkeyCache.FileStore.xml",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.dll",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.pdb",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.pri",
+        "lib/uap10.0.16299/MonkeyCache.FileStore.xml",
+        "lib/xamarinios10/MonkeyCache.FileStore.dll",
+        "lib/xamarinios10/MonkeyCache.FileStore.pdb",
+        "lib/xamarinios10/MonkeyCache.FileStore.xml",
+        "lib/xamarinmac20/MonkeyCache.FileStore.dll",
+        "lib/xamarinmac20/MonkeyCache.FileStore.pdb",
+        "lib/xamarinmac20/MonkeyCache.FileStore.xml",
+        "lib/xamarintvos10/MonkeyCache.FileStore.dll",
+        "lib/xamarintvos10/MonkeyCache.FileStore.pdb",
+        "lib/xamarintvos10/MonkeyCache.FileStore.xml",
+        "monkeycache.filestore.1.6.3.nupkg.sha512",
+        "monkeycache.filestore.nuspec"
       ]
     },
     "Newtonsoft.Json/13.0.2": {
@@ -3717,6 +3847,7 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v13.0": [
       "FindJob >= 1.0.0",
+      "MonkeyCache.FileStore >= 1.6.3",
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2196"
     ]
@@ -3756,6 +3887,10 @@
     "frameworks": {
       "monoandroid13.0": {
         "dependencies": {
+          "MonkeyCache.FileStore": {
+            "target": "Package",
+            "version": "[1.6.3, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.7.0, )"

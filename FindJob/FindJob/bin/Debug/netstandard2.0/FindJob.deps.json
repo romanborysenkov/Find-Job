@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "FindJob/1.0.0": {
         "dependencies": {
+          "MonkeyCache.FileStore": "1.6.3",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "13.0.2",
           "System.Text.Json": "5.0.2",
@@ -32,6 +33,29 @@
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
+      "MonkeyCache/1.6.3": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MonkeyCache.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MonkeyCache.FileStore/1.6.3": {
+        "dependencies": {
+          "MonkeyCache": "1.6.3",
+          "Newtonsoft.Json": "13.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MonkeyCache.FileStore.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -202,6 +226,20 @@
       "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "MonkeyCache/1.6.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-M7BE5LBnIdkaovXdfKq2HoJPOoD5dgt3ilwWB6f63/M7Kw/R+P+H+pw//50/Ei6beX6DuRwmuQngxyV6ZsjqCQ==",
+      "path": "monkeycache/1.6.3",
+      "hashPath": "monkeycache.1.6.3.nupkg.sha512"
+    },
+    "MonkeyCache.FileStore/1.6.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uc9rdTkIMvtf8aZzJHAcwPaVG09NQQkwKLdfh3fRKpqhm2GVx1hiWvgRYmc42Mjx7ECELn+1vg7Cn6KAWezZNw==",
+      "path": "monkeycache.filestore/1.6.3",
+      "hashPath": "monkeycache.filestore.1.6.3.nupkg.sha512"
     },
     "NETStandard.Library/2.0.3": {
       "type": "package",

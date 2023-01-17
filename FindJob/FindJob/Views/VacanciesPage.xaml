@@ -14,9 +14,9 @@
    >
 
 
-    <ContentPage.BindingContext>
+    <!--<ContentPage.BindingContext>
         <local:VacanciesViewModel/>
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
 
     <ContentPage.ToolbarItems>
        <!-- <ToolbarItem Text="Login" Command="{Binding GoToLogin}"/>-->
@@ -41,7 +41,7 @@
         <Frame BackgroundColor="White" Grid.Row="1" HasShadow="True" CornerRadius="10" Margin="20,0,20,0" Padding="0" HeightRequest="100" VerticalOptions="Start">
            
                 <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
-                      <SearchBar FontSize="24" Margin="-10,0,-5,0" WidthRequest="390" BackgroundColor="White" TextColor="Black" Text="{Binding SearchString}"/>
+                      <SearchBar Placeholder="Search vacancies" FontSize="24" Margin="-10,0,-5,0" WidthRequest="390" BackgroundColor="White" TextColor="Black" Text="{Binding SearchString}"/>
                 </StackLayout>
         </Frame>
 

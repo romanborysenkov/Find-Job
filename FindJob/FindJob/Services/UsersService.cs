@@ -16,7 +16,7 @@ namespace FindJob.Services
             List<User> users;
             using(HttpClient client = new HttpClient())
             {
-                 var response = client.GetStringAsync("http://192.168.1.4:5032/api/User");
+                 var response = client.GetStringAsync("http://192.168.1.7:5032/api/User");
                  users =JsonConvert.DeserializeObject<List<User>>(await response);
               
             }
@@ -28,7 +28,7 @@ namespace FindJob.Services
             User user;
             using (HttpClient client = new HttpClient())
             {
-                var response = client.GetStringAsync($"http://192.168.1.4:5032/api/User/{id}");
+                var response = client.GetStringAsync($"http://192.168.1.7:5032/api/User/{id}");
                 user = JsonConvert.DeserializeObject<User>(await response);
 
             }
@@ -41,7 +41,7 @@ namespace FindJob.Services
             {
                 var request = JsonConvert.SerializeObject(user);
                 var fin = new StringContent(request, Encoding.UTF8, "application/json");
-            var result = await client.PostAsync("http://192.168.1.4:5032/api/User", fin);
+            var result = await client.PostAsync("http://192.168.1.7:5032/api/User", fin);
                var ou= JsonConvert.DeserializeObject<User>(await result.Content.ReadAsStringAsync());
 
                 return ou;
@@ -54,7 +54,7 @@ namespace FindJob.Services
             {
                 var request = JsonConvert.SerializeObject(user);
                 var fin = new StringContent(request, Encoding.UTF8, "application/json");
-                var result = await client.PutAsync("http://192.168.1.4:5032/api/User", fin);
+                var result = await client.PutAsync("http://192.168.1.7:5032/api/User", fin);
                 var ou = JsonConvert.DeserializeObject<User>(await result.Content.ReadAsStringAsync());
 
                 return ou;
@@ -65,7 +65,7 @@ namespace FindJob.Services
         {
             using(HttpClient client = new HttpClient())
             {
-                var result = client.GetStringAsync($"http://192.168.1.4:5032/api/User/{email}/{password}");
+                var result = client.GetStringAsync($"http://192.168.1.7:5032/api/User/{email}/{password}");
                var user = JsonConvert.DeserializeObject<User>(await result);
                 return user;
                

@@ -1,43 +1,39 @@
 ﻿<Properties StartupConfiguration="{20AF7ACE-F089-4FC2-9643-9B39EA9DB248}|Default">
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.1.0.1" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/Services/ResumeService.cs" relfile="FindJob/FindJob/Services/ResumeService.cs" line="48" column="1" />
-      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/Services/ResumeService.cs" relfile="FindJob/FindJob/Services/ResumeService.cs" line="47" column="1" />
-      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/Services/ResumeService.cs" relfile="FindJob/FindJob/Services/ResumeService.cs" line="49" column="1" />
-      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/Services/ResumeService.cs" relfile="FindJob/FindJob/Services/ResumeService.cs" line="66" column="1" />
-      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/Services/ResumeService.cs" relfile="FindJob/FindJob/Services/ResumeService.cs" line="67" column="1" />
-      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/ViewModels/ResumeViewModel.cs" relfile="FindJob/FindJob/ViewModels/ResumeViewModel.cs" line="76" column="1" />
-      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/ViewModels/ResumeViewModel.cs" relfile="FindJob/FindJob/ViewModels/ResumeViewModel.cs" line="70" column="1" />
-      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/ViewModels/ResumeViewModel.cs" relfile="FindJob/FindJob/ViewModels/ResumeViewModel.cs" line="71" column="1" />
-      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/ViewModels/ResumeViewModel.cs" relfile="FindJob/FindJob/ViewModels/ResumeViewModel.cs" line="72" column="1" />
-      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/Services/ResumeService.cs" relfile="FindJob/FindJob/Services/ResumeService.cs" line="64" column="1" />
-      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/Views/ResumePage.xaml.cs" relfile="FindJob/FindJob/Views/ResumePage.xaml.cs" line="36" column="1" />
-      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/Views/ResumePage.xaml.cs" relfile="FindJob/FindJob/Views/ResumePage.xaml.cs" line="37" column="1" />
+      <Breakpoint file="/Users/romsyaborysenko/Documents/programming/NET/xamarin/FindJob/FindJob/FindJob/ViewModels/VacancyDetailsViewModel.cs" relfile="FindJob/FindJob/ViewModels/VacancyDetailsViewModel.cs" line="71" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <Debugger.DebugSourceFolders>
-    <String>/Users/romsyaborysenko/Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/mono/mono/a96bde9730e4c2244536ce5f4250e5e4f4e6780a</String>
-  </Debugger.DebugSourceFolders>
-  <MonoDevelop.Ide.Workbench ActiveDocument="FindJob/FindJob/ViewModels/ResponsesViewModel.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.1.0.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FindJob/FindJob/ViewModels/VacancyDetailsViewModel.cs">
     <Files>
-      <File FileName="FindJob/FindJob/ViewModels/ResponsesViewModel.cs" Line="13" Column="26" />
-      <File FileName="FindJob/FindJob/ViewModels/ResumeViewModel.cs" Line="1" Column="1" />
-      <File FileName="FindJob/FindJob/Views/VacanciesPage.xaml" Line="50" Column="1" NotebookId="1" />
+      <File FileName="FindJob/FindJob/Views/ResumePage.xaml.cs" Line="24" Column="5" />
+      <File FileName="FindJob/FindJob/Views/DetailsPage.xaml.cs" Line="27" Column="33" />
+      <File FileName="FindJob/FindJob/Views/DetailsPage.xaml" Line="39" Column="94" />
+      <File FileName="FindJob/FindJob/ViewModels/VacancyDetailsViewModel.cs" Line="71" Column="19" NotebookId="1" />
+      <File FileName="FindJob/FindJob/ViewModels/VacanciesViewModel.cs" Line="157" Column="33" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="FindJob" expanded="True" selected="True">
+          <Node name="FindJob" expanded="True">
             <Node name="FindJob" expanded="True">
+              <Node name="Interfaces" expanded="True" />
               <Node name="Services" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="VacancyDetailsViewModel.cs" selected="True" />
+              </Node>
               <Node name="Views" expanded="True">
+                <Node name="DetailsPage.xaml" expanded="True" />
+                <Node name="LoginPage.xaml" expanded="True" />
                 <Node name="ResponsesPage.xaml" expanded="True" />
                 <Node name="ResumePage.xaml" expanded="True" />
+                <Node name="SignupPage.xaml" expanded="True" />
                 <Node name="VacanciesPage.xaml" expanded="True" />
               </Node>
+              <Node name="App.xaml" expanded="True" />
               <Node name="AppShell.xaml" expanded="True" />
             </Node>
           </Node>
@@ -45,8 +41,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.FindJob.Android AndroidDesignerPreferredTheme="MainTheme" PreferredExecutionTarget="Android.pixel_5_-_api_31" />
+  <Debugger.DebugSourceFolders>
+    <String>/Users/romsyaborysenko/Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/mono/mono/a96bde9730e4c2244536ce5f4250e5e4f4e6780a</String>
+  </Debugger.DebugSourceFolders>
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_31" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.FindJob.Android PreferredExecutionTarget="Android.pixel_5_-_api_31" AndroidDesignerPreferredTheme="MainTheme" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

@@ -16,6 +16,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="System.Text.Json" Version="5.0.2" />
     <PackageReference Include="Xamarin.CommunityToolkit" Version="1.1.0" />
+    <PackageReference Include="MonkeyCache.FileStore" Version="1.6.3" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Newtonsoft.Json" />
@@ -28,6 +29,8 @@
     <None Remove="Xamarin.Forms.PancakeView" />
     <None Remove="Renderers\" />
     <None Remove="Views\Employer\" />
+    <None Remove="MonkeyCache.FileStore" />
+    <None Remove="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -36,5 +39,6 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Renderers\" />
     <Folder Include="Views\Employer\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 </Project>

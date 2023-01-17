@@ -1,4 +1,5 @@
 ﻿using System;
+using MonkeyCache.FileStore;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,6 +11,7 @@ namespace FindJob
         {
             InitializeComponent();
 
+            Barrel.ApplicationId = "FindJob_ID";
             MainPage = new AppShell();
         }
 

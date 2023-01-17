@@ -25,7 +25,6 @@ namespace FindWork.API.Controllers
             return  Ok(users); 
         }
 
-
         [HttpGet("{id}")]
         public async Task<ActionResult<User>>GetUserById(string id) { return (await _context.users.FindAsync(id)); }
 

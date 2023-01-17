@@ -28,7 +28,7 @@ namespace FindJob.Services
             bool answers;
             using (HttpClient client = new HttpClient())
             {
-                var response = client.GetStringAsync($"http://192.168.1.4:5032/api/Responses/{id}");
+                var response = client.GetStringAsync($"http://192.168.1.7:5032/api/Responses/{id}");
                 answers = JsonConvert.DeserializeObject<bool>(await response);
                 if (answers.ToString() == "false") return false;
             }
@@ -42,7 +42,7 @@ namespace FindJob.Services
                 var request = JsonConvert.SerializeObject(answer);
                 var fin = new StringContent(request, Encoding.UTF8, "application/json");
                
-                var result = await client.PostAsync("http://192.168.1.4:5032/api/Responses", fin);
+                var result = await client.PostAsync("http://192.168.1.7:5032/api/Responses", fin);
                 var ou = JsonConvert.DeserializeObject<Responses>(await result.Content.ReadAsStringAsync());
 
                 return ou;

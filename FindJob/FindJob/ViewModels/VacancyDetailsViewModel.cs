@@ -21,11 +21,37 @@ namespace FindJob.ViewModels
         public string VacancyId
         {
             get { return vacancyId; }
-            set { vacancyId = value; ExecuteLoadVacancyCommand(); }
+            set {  vacancyId = value; ExecuteLoadVacancyCommand(); }
         }
 
-        public bool withResponse { get; set; }
-		public bool forButton { get; set; }
+        private Vacancy vac = new Vacancy();
+
+        public Vacancy vacancy
+        {
+            get => vac;
+            set => SetProperty(ref vac, value);
+        }
+
+
+
+        private bool withresponse;
+
+		public bool WithResponse
+		{
+			get => withresponse;
+			set
+			{
+				withresponse = value; OnPropertyChanged();
+			}
+		}
+
+		private bool forButton;
+
+		public bool ForButton
+		{
+			get => forButton;
+			set { forButton = value; OnPropertyChanged(); }
+		}
 
         public Command LoadVacancyCommand { get; }
 
@@ -36,14 +62,14 @@ namespace FindJob.ViewModels
 			Title = "Details";
 			LoadVacancyCommand = new Command(ExecuteLoadVacancyCommand);
 			OnSendAnswer = new Command(SendAnswer);
-		
+
         }
 
-		public async Task responded()
+		public async void responded()
 		{
-			withResponse = 
+			withresponse = 
 			await  responsesservice.GetResponseByVacancyId(VacancyId);
-			forButton= !withResponse;
+			
 		}
 	
 
@@ -58,29 +84,21 @@ namespace FindJob.ViewModels
             await Shell.Current.GoToAsync($"///{nameof(Views.VacanciesPage)}");
         }
 
-		private Vacancy vac;
-
-		public Vacancy vacancy
-		{
-			get => vac;
-			set => SetProperty(ref vac, value);
-		}
-
-		
-
 		public string TimePub
 		{
 			get => vacancy.publishtime.ToShortDateString();
-			
 		}
 
         public async void ExecuteLoadVacancyCommand()
            {
 			IsBusy = true;
             var  v = await service.GetVacancyById(VacancyId);
-			  vacancy = v;
+			WithResponse =await responsesservice.GetResponseByVacancyId(VacancyId);
+            ForButton = !WithResponse;
+
+            vacancy = v;
+
 			IsBusy = false;
-        
         }
 	}
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using FindJob.Views;
+using MonkeyCache.FileStore;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -12,6 +13,7 @@ namespace FindJob
         {
             
             InitializeComponent();
+          
             Routing.RegisterRoute(nameof(VacanciesPage), typeof(VacanciesPage));
             Routing.RegisterRoute(nameof(DetailsPage), typeof(DetailsPage));
             Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
@@ -39,12 +41,11 @@ namespace FindJob
 
        void logout_Clicked(System.Object sender, System.EventArgs e)
         {
-            Preferences.Remove("email", "");
-            Preferences.Remove("firstname", "");
-            Preferences.Remove("secondname", "");
-            Preferences.Remove("phone", "");
+          
             Preferences.Remove("userId", "");
             Preferences.Set("isLogined", false);
+            Barrel.Current.Empty(key: "logined_user");
+
 
             Application.Current.MainPage = new AppShell();
             OnAppearing();

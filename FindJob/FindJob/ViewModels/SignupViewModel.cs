@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Text;
 using FindJob.Services;
 using Xamarin.Essentials;
+using MonkeyCache.FileStore;
 
 namespace FindJob.ViewModels
 {
@@ -44,7 +45,7 @@ namespace FindJob.ViewModels
             {
                 firstname = u.firstname,
                 secondname = u.secondname,
-                email = u.secondname,
+                email = u.email,
                 salt = u.salt,
                 saltedhashedpassword = u.saltedhashedpassword,
                 phone = u.phone
@@ -52,6 +53,9 @@ namespace FindJob.ViewModels
             var result =  await service.PostUser(us);
             Preferences.Set("isLogined", true);
             Preferences.Set("userId", result.Id);
+
+            Barrel.Current.Add(key: "logined_user", data: user, expireIn: TimeSpan.FromDays(30));
+
             await Shell.Current.GoToAsync("//VacanciesPage");
         }
 
@@ -61,46 +65,3 @@ namespace FindJob.ViewModels
         }
     }
 }
-
-
-
-
-
-
-/* public string firstname
-       {
-           get => user.firstname;
-           set { user.firstname = value; OnPropertyChanged("firstname"); } }
-
-
-       public string secondname
-       {
-           get => user.secondname;
-           set { user.secondname = value; OnPropertyChanged("secondname"); }
-       }
-
-       public string email
-       {
-           get => user.email;
-           set { user.email = value; OnPropertyChanged("email"); }
-       }
-
-       public string salt
-       {
-           get => user.salt;
-           set { user.salt = value; OnPropertyChanged("salt"); }
-       }
-
-       public string saltedhashedpassword
-       {
-           get => user.saltedhashedpassword;
-           set { user.saltedhashedpassword = value; OnPropertyChanged("saltedhashedpassword"); }
-       }
-
-       public string phone
-       {
-           get => user.phone;
-           set { user.phone = value; OnPropertyChanged("phone"); }
-       }
-
-       */

@@ -8,10 +8,11 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 using Xamarin.Essentials;
+using FindJob.Interfaces;
 
 namespace FindJob.Services
 {
-    public class VacanciesService
+    public class VacanciesService:IVacancies
     {
         public async Task<List<Vacancy>> GetVacanciesAsync()
         {
@@ -20,7 +21,7 @@ namespace FindJob.Services
             using (HttpClient client = new HttpClient())
             {
                 client.Timeout = new TimeSpan(0, 0, 0, 5);
-                var response = await client.GetStringAsync("http://192.168.1.4:5032/api/Vacancy");
+                var response = await client.GetStringAsync("http://192.168.1.7:5032/api/Vacancy");
 
                 vacancies = JsonConvert.DeserializeObject<List<Vacancy>>(response);
                 return vacancies;
@@ -36,7 +37,7 @@ namespace FindJob.Services
             using (HttpClient client = new HttpClient())
             {
                 client.Timeout = new TimeSpan(0,0,0,5);
-                var response = await client.GetStringAsync($"http://192.168.1.4:5032/api/Vacancy/responses/{id}");
+                var response = await client.GetStringAsync($"http://192.168.1.7:5032/api/Vacancy/responses/{id}");
 
                 vacancies = JsonConvert.DeserializeObject<List<Vacancy>>(response);
                 return vacancies;
@@ -49,7 +50,7 @@ namespace FindJob.Services
             using (HttpClient client = new HttpClient())
             {
 
-                var response = await client.GetStringAsync($"http://192.168.1.4:5032/api/Vacancy/{id}");
+                var response = await client.GetStringAsync($"http://192.168.1.7:5032/api/Vacancy/{id}");
                 vacancy = JsonConvert.DeserializeObject<Vacancy>(response);
             }
             return vacancy;

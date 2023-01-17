@@ -17,12 +17,9 @@ namespace FindJob.Views
         {
              InitializeComponent();
 
-           // BindingContext = _viewModel = new VacanciesViewModel();
+            BindingContext = _viewModel = new VacanciesViewModel();
            
         }
-     
-      
-
     }
 }
 

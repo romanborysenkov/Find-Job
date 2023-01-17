@@ -16,26 +16,7 @@ namespace FindJob.Views
         {
             InitializeComponent();
             BindingContext = viewModel = new VacancyDetailsViewModel();
-
-
-
         }
-
-        protected async override void OnAppearing()
-        {
-            
-            
-
-            await viewModel.responded();
-            if(viewModel.forButton)
-            {
-                reqbut.IsVisible = true;
-                reqlab.IsVisible = false;
-            }
-            else { reqbut.IsVisible = false; reqlab.IsVisible = true; }
-            base.OnAppearing();
-        }
-
 
     }
 }

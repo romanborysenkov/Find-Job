@@ -16,7 +16,7 @@ namespace FindJob.Services
             List<Resume> resumes;
             using (HttpClient client = new HttpClient())
             {
-                var response = client.GetStringAsync("http://192.168.1.4:5032/api/Resume");
+                var response = client.GetStringAsync("http://192.168.1.7:5032/api/Resume");
                 resumes = JsonConvert.DeserializeObject<List<Resume>>(await response);
 
             }
@@ -28,7 +28,7 @@ namespace FindJob.Services
             Resume resume = new Resume();
             using(HttpClient client = new HttpClient())
             {
-                var response = client.GetStringAsync($"http://192.168.1.4:5032/api/Resume/user/{id}");
+                var response = client.GetStringAsync($"http://192.168.1.7:5032/api/Resume/user/{id}");
                 resume = JsonConvert.DeserializeObject<Resume>(await response);
                 if(response.Result.Length==0)
                 {
@@ -46,7 +46,7 @@ namespace FindJob.Services
                 var request = JsonConvert.SerializeObject(resume);
                 var fin = new StringContent(request, Encoding.UTF8, "application/json");
                  resume.photoSrc = JsonConvert.SerializeObject(resume.photoFile);
-                var result = await client.PostAsync("http://192.168.1.4:5032/api/Resume", fin);
+                var result = await client.PostAsync("http://192.168.1.7:5032/api/Resume", fin);
                 var ou = JsonConvert.DeserializeObject<Resume>(await result.Content.ReadAsStringAsync());
 
                  return ou;
@@ -60,13 +60,13 @@ namespace FindJob.Services
                 // post image
                 if (resume.photoFile != null)
                 {
-                    await client.PostAsync("http://192.168.1.4:5032/api/Resume/UploadFile", resume.photoFile);
+                    await client.PostAsync("http://192.168.1.7:5032/api/Resume/UploadFile", resume.photoFile);
                 }
 
                 resume.photoFile = null;
                 var request = JsonConvert.SerializeObject(resume);
                 var fin = new StringContent(request, Encoding.UTF8, "application/json");
-                var result = await client.PutAsync("http://192.168.1.4:5032/api/Resume", fin);
+                var result = await client.PutAsync("http://192.168.1.7:5032/api/Resume", fin);
                // var ou = JsonConvert.DeserializeObject<Resume>(await result.Content.ReadAsStringAsync());
 
                // return ou;

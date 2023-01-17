@@ -10,19 +10,20 @@ using FindJob.Views;
 
 using System.Collections.Generic;
 using System.Windows.Input;
-
+using FindJob.Interfaces;
 
 using Xamarin.Essentials;
 
 using Xamarin.Forms.Xaml;
 using System.Linq;
+using MonkeyCache.FileStore;
 
 namespace FindJob.ViewModels
 {
   
     public class VacanciesViewModel:BaseViewModel
     {
-        public VacanciesService service = new VacanciesService();
+        public IVacancies service = new VacanciesService();
 
         public Command LoadVacanciesCommand { get; }
 
@@ -50,11 +51,17 @@ namespace FindJob.ViewModels
             set { vacancies = value; OnPropertyChanged(); }
         }
 
-        private string username = Preferences.Get("firstname", "")+" "+ Preferences.Get("secondname", "");
+        private User user; // Preferences.Get("firstname", "")+" "+ Preferences.Get("secondname", "");
+
+        public User UserThis
+        {
+            get=> user;
+        }
 
         public string UserName
         {
-            get=> username;
+            get;
+            set;
         }
 
         public VacanciesViewModel()
@@ -67,6 +74,7 @@ namespace FindJob.ViewModels
             isLogined = !Preferences.Get("isLogined", false);
 
             ExecuteLoadCommand();
+            ExecuteUserCommand();
         }
 
         public bool IsLogined
@@ -75,20 +83,57 @@ namespace FindJob.ViewModels
             set{ SetProperty(ref isLogined, value); }
         }
 
+        public  void ExecuteUserCommand()
+        {
+            if(Preferences.Get("isLogined", false))
+            {
+             user = Barrel.Current.Get<User>(key: "logined_user");
+            UserName = user.firstname + " " + user.secondname;
+            }
+          
+        }
+
         public async Task ExecuteLoadCommand()
         {
             IsBusy = true;
-            Vacancies = await service.GetVacanciesAsync();
-            IsBusy = false;
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet && !Barrel.Current.IsExpired(key: "main_vacancies"))
+            {
+               await Task.Yield();
+                var vacs = Barrel.Current.Get<IEnumerable<Vacancy>>(key: "main_vacancies");
+
+                if(Vacancies.Count>0)
+                {
+                    Vacancies.Clear();
+                    Vacancies = vacs.ToList();
+                }
+                else  Vacancies = vacs.ToList(); 
+            }
+            else
+            {
+                Vacancies = await service.GetVacanciesAsync();
+                Barrel.Current.Add(key: "main_vacancies", data: this.Vacancies, expireIn: TimeSpan.FromDays(3));
+            }
+             IsBusy = false;
         }
 
         public async void ExecuteSearchCommand()
           {
+            if (Connectivity.NetworkAccess == NetworkAccess.Internet)
+            {
                 Vacancies = await service.GetVacanciesAsync();
-             
+
                 Vacancies = vacancies.Where(s => s.vacancyname.ToLower().Contains(SearchString.ToLower())
                 || s.description.ToLower().Contains(SearchString.ToLower())
                 || s.category.ToLower().Contains(SearchString.ToLower())).ToList();
+            }
+            else
+            {
+                var localvacancies = Vacancies;
+                Vacancies = vacancies.Where(s => s.vacancyname.ToLower().Contains(SearchString.ToLower())
+                || s.description.ToLower().Contains(SearchString.ToLower())
+                || s.category.ToLower().Contains(SearchString.ToLower())).ToList();
+            }
           }
               
 
@@ -111,7 +156,8 @@ namespace FindJob.ViewModels
         {
             if (vacancy == null)
                 return;
-            await Shell.Current.GoToAsync($"{nameof(DetailsPage)}?{nameof(VacancyDetailsViewModel.VacancyId)}={vacancy.vacancyId.ToString()}");
+            if(Connectivity.NetworkAccess == NetworkAccess.Internet)
+                await Shell.Current.GoToAsync($"{nameof(DetailsPage)}?{nameof(VacancyDetailsViewModel.VacancyId)}={vacancy.vacancyId.ToString()}");
         }
     }
 }

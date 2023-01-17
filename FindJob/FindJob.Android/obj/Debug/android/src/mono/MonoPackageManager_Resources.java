@@ -6,6 +6,8 @@ public class MonoPackageManager_Resources {
 		"FindJob.dll",
 		"FormsViewGroup.dll",
 		"Microsoft.Bcl.AsyncInterfaces.dll",
+		"MonkeyCache.dll",
+		"MonkeyCache.FileStore.dll",
 		"Newtonsoft.Json.dll",
 		"System.Text.Encodings.Web.dll",
 		"System.Text.Json.dll",

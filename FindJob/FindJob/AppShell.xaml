@@ -25,6 +25,7 @@
     <Shell.FlyoutHeader>
         <Grid BackgroundColor="Black" HeightRequest="200">
             <Label x:Name="header"
+                  
                        TextColor="White"
                        FontSize="28"
                        Margin="20"

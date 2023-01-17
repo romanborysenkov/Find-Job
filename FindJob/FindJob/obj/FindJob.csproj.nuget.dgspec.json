@@ -38,6 +38,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "MonkeyCache.FileStore": {
+              "target": "Package",
+              "version": "[1.6.3, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -75,7 +79,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/Users/romsyaborysenko/Library/Caches/VisualStudio/17.0/MSBuild/59530_3/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/romsyaborysenko/Library/Caches/VisualStudio/17.0/MSBuild/80851_3/RuntimeIdentifierGraph.json"
         }
       }
     }

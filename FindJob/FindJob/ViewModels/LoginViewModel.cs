@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using FindJob.Views;
 using FindJob.Services;
 using Xamarin.Essentials;
+using MonkeyCache.FileStore;
 
 namespace FindJob.ViewModels
 {
@@ -37,24 +38,22 @@ namespace FindJob.ViewModels
 
         private async void Login()
         {
-           
-       var user = await service.LoginUser(Email, Password);
-            if(user==null) { }
-            else
+
+            if(Connectivity.NetworkAccess==NetworkAccess.Internet)
             {
-                Preferences.Set("email", user.email);
-                Preferences.Set("firstname", user.firstname);
-                Preferences.Set("secondname", user.secondname);
-                Preferences.Set("phone", user.phone);
-                Preferences.Set("userId", user.Id);
-                Preferences.Set("isLogined", true);
+                var user = await service.LoginUser(Email, Password);
+                if(!string.IsNullOrEmpty(user.email) && !string.IsNullOrEmpty(user.firstname))
+                {
+                    Barrel.Current.Add(key: "logined_user", data: user, expireIn: TimeSpan.FromDays(30));
 
-                //   await Shell.Current.GoToAsync("//VacanciesPage");
-                //await Shell.Current.GoToAsync($"{nameof(VacanciesPage)}?{nameof(VacanciesViewModel.IsLogined)}={false}");
+                    Preferences.Set("userId", user.Id);
+                    Preferences.Set("isLogined", true);
 
-                Application.Current.MainPage = new AppShell();
-               // await Shell.Current.GoToAsync($"///{nameof(VacanciesPage)}?{nameof(VacanciesPage.isLogined)}={true}");
+                    Application.Current.MainPage = new AppShell();
+                }
             }
+           
+     
         }
 
         private async void SignUp()
